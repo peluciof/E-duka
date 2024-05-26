@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" >
+      <title>Document</title>
+      <link rel="stylesheet" href="/static/css/login.css">
+  </head>
+
+
+  <body>
+      <div class="wrapper fadeInDown">
+          <div id="formContent">
+            <!-- Tabs Titles -->
+            <a class="active"> Fazer Login </a>
+            <a type="active" class="underlineHover" href="/cadastrar">Se cadastrar </a>
+        
+            <!-- Icon -->
+            <div class="fadeIn first">
+              <img src="/static/imags/logo.png" id="icon" alt="User Icon" />
+            </div>
+        
+            <!-- Login Form -->
+            <form action="/login" id="login" method="post"> <!-- <--- Local de conexão com Back end-->
+              <input type="text" id="login" class="fadeIn second" name="email_login" placeholder="Digite seu login"> 
+              <input type="text" id="password" class="fadeIn third" name="senha" placeholder="Digite sua senha"> 
+              <input type="submit" class="fadeIn fourth" value="Logar">
+              
+              {% set mensagens = get_flashed_messages() %}
+              {%  if mensagens %}
+              <div id="alerta_python">
+
+                {{mensagens[0]}}
+
+              </div>
+              
+              {%  endif   %}
+            
+            </form>
+        
+            <!-- Remind Passowrd -->
+            <div id="formFooter">
+              <a class="underlineHover" href="/home.html">Esqueceu sua senha?</a>
+            </div>
+        
+          </div>
+</div>
+
+  </body>
+</html>

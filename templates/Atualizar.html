@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" >
+      <title>Document</title>
+      <link rel="stylesheet" href="/static/css/cadastroAluno.css">
+      
+  </head>
+  </head>
+
+<body>
+   
+        <div class="form-container">
+            <h2>Formulário de Cadastro de Alunos</h2>
+            <form action="{{aluno[0]['CPF']}}" method="post">
+                <label for="nome">Nome do Aluno:</label>
+                <input type="text" id="nome" name="nome" required value="{{aluno[0]['CPF']}}">
+    
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento" name="data_nascimento" required value="{{aluno[0]['dataNascimento']}}">
+    
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="123.456.789-00" value="{{aluno[0]['CPF']}}">
+    
+                <label for="serie">Série:</label>
+                <input type="text" id="serie" name="serie" required value="{{aluno[0]['serie']}}">
+    
+                <label for="classe">Classe:</label>
+                <input type="text" id="classe" name="classe" required value="classe">
+    
+                <label for="deficiencia">Deficiência:</label>
+                <input type="text" id="deficiencia" name="deficiencia" value="deficiencia">
+    
+                <button type="submit">Atualizar</button>
+            </form>
+        </div>
+    
+</body>
+</html>    

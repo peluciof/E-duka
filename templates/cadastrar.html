@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" >
+      <title>Document</title>
+      <link rel="stylesheet" href="/static/css/cadastrar.css">
+  </head>
+
+<body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <a class="active"> Se Cadastrar </a>
+          <a type="active" class="underlineHover" href="/">Fazer login </a>
+      
+          <!-- Icon -->
+          <div class="fadeIn first">
+            <img src="/static/imags/logo.png" id="icon" alt="User Icon" />
+          </div>
+      
+          <!-- Register Form -->
+          <form action="/cadastroProfessor" id="cadastro" method="post"> <!-- <--- Local de conexão com Back end-->
+            <input type="text" id="email" class="fadeIn second" name="email_prof" placeholder="Digite seu email">
+            <input type="text" id="login" class="fadeIn second" name="nome_prof" placeholder="nome de usuario"> 
+            <input type="text" id="password" class="fadeIn third" name="senha_prof" placeholder="Digite sua senha"> 
+            <input type="submit" class="fadeIn fourth" value="Cadastrar">
+          
+            {% set mensagens = get_flashed_messages() %}
+              {%  if mensagens %}
+              <div id="alerta_python">
+
+                {{mensagens[0]}}
+
+              </div>
+              
+              {%  endif   %}
+            
+          </form>
+      
+          <!-- Remind Passowrd -->
+          <div id="formFooter">
+            <a class="underlineHover" href="/home.html">Esqueceu sua senha?</a>
+          </div>
+      
+        </div>
+</div>
+
+</html>

@@ -1,0 +1,22 @@
+[
+    {
+        "email": "teste@gmail.com",
+        "nome": "123",
+        "senha": "123"
+    },
+    {
+        "email": "teste@teste.com",
+        "nome": "Teste2",
+        "senha": "123456"
+    },
+    {
+        "email": "user01@eduka.com",
+        "nome": "userx",
+        "senha": "user1234"
+    },
+    {
+        "email": "user@eduka.com",
+        "nome": "prof01",
+        "senha": "1234"
+    }
+]
